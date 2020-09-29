@@ -1,4 +1,4 @@
-const findBestEmployee = function (employees) {
+const findBestEmployee = employees => {
     'use strict';
     // Write code under this line
     let completeTasks = 0;
@@ -8,8 +8,9 @@ const findBestEmployee = function (employees) {
             completeTasks = employees[key]
             bestEmployee = key;
         }
-    }return bestEmployee;
-
+    }
+    
+    return bestEmployee;
   };
   
   // Объекты и ожидаемый результат
