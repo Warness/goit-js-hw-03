@@ -3,15 +3,24 @@ function getAllPropValues (array, prop) {
     // Write code under this line 
     let propertyValues = []
     for (const object of array) {
-        // console.log(object);
+        const newArray = Object.entries(object)
 
-        for (const key in object) {
-
-            if (key === prop) {
-                propertyValues.push(object[key])               
+        for (const array of newArray) {
+            if (prop === array[0]){
+                propertyValues.push(array[1])
             }
         }
+        // for (const key in object) {
+
+        //     if (key === prop) {
+        //         propertyValues.push(object[key])               
+        //     }
+        // }
     }
+    for (const {name,price,quantity} of array) {
+    console.log(name);
+    }
+
     return propertyValues
   }
   
@@ -29,9 +38,9 @@ function getAllPropValues (array, prop) {
   console.log(getAllPropValues(products, 'name'));
   // ['Радар', 'Радар', 'Радар', 'Сканер', 'Сканер', 'Дроид', 'Захват']
   
-  console.log(getAllPropValues(products, 'quantity'));
-  // [4, 2, 1, 1, 3, 7, 2]
+//   console.log(getAllPropValues(products, 'quantity'));
+//   // [4, 2, 1, 1, 3, 7, 2]
   
-  console.log(getAllPropValues(products, 'category'));
-  //  []
+//   console.log(getAllPropValues(products, 'category'));
+//   //  []
   
